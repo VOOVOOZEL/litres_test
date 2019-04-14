@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+{% if res %}
+<div class="sectionHeader">
+    <h1>Вы ввели неверные данные. Попробуйте снова.</h1>
+</div>
+{% else %}
+<div class="AuthFormDialog__inner">
+    <div class="title-1">Вход</div>
+    <div class="Form__form">
+        <form action="/" method="post">
+            {% csrf_token %}
+            <div class="Form__formRow jest-auth-email">
+                <label class="FormTextInput__formTextInput" for="your_name">Email:</label>
+                {{ form.your_name }}
+            </div>
+            <div class="Form__formRow jest-auth-password">
+                <label class="FormTextInput__formTextInput FormTextInput__passwordInput" for="your_pass">Пароль:</label>
+                {{ form.your_pass }}
+            </div>
+            <div class="Form__formControl">
+                <button class="Button__primaryButton" type="submit">Войти</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}

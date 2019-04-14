@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+
+{% if objects %}
+    <div class="sectionHeader">
+        <h1>Все книги</h1>
+    </div>
+    <div class="CatalogHeader__bookCount">
+        <div>У вас добавлено {{count}} книг(и)</div>
+    </div>
+    <ul class="Book_list_items">
+
+    {% for obj in objects %}
+        <li class="Book_item">
+            <div class="ContextBookCard__book">
+                <div class="ContextBookCard__bookCover">
+                    <img src="https://i3.mybook.io/p/600x/{{ obj.book.default_cover }}" width="176" height="256">
+                </div>
+                <div class="ContextBookCard__bookDetail">
+                    <div class="ContextBookCard__bookData">
+                        <div class="ContextBookCard__bookTitle">
+                            {{ obj.book.name }}
+                        </div>
+                        {% for author in obj.book.authors %}
+                        <div class="ContextBookCard__bookAuthor">
+                            {{ author.genitive_full_name }}
+                        </div>
+                        <div class="ContextBookCard__bookGenre">
+                            {{ obj.book.genres_names }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <div class="sectionHeader">
+        <h1>Отсутствуют добавленные книги</h1>
+    </div>
+{% endif %}

@@ -1,0 +1,120 @@
+li {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1em;
+    padding-bottom: 8px;
+    z-index: 1
+}
+
+.CatalogHeader__bookCount {
+    display: flex;
+    color: #7c7f84;
+    font: 14px/1.43em firasans,sans-serif;
+    white-space: nowrap;
+}
+
+.Book_list_items {
+    width: 100%;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.Book_item {
+    width: calc(46% + 25px);
+}
+
+.title-1, h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1em;
+    padding-bottom: 8px;
+    z-index: 1;
+}
+
+.AuthFormDialog__inner {
+    margin: 0 auto;
+    font-family: firasans,sans-serif;
+    font-size: 12px;
+    line-height: 1.33em;
+    text-align: center;
+    color: #393f45;
+}
+
+.ContextBookCard__book {
+    position: relative;
+    max-width: 350px;
+    width: -webkit-fill-available;
+    display: flex;
+    padding-bottom: 28px;
+}
+
+.ContextBookCard__bookDetail {
+    width: 100%;
+    padding: 2px 0 8px 12px;
+}
+
+.ContextBookCard__bookData {
+    max-width: 90%;
+    padding: 11px 0 4px;
+}
+
+.ContextBookCard__bookCover {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 8px 0;
+}
+
+.ContextBookCard__bookTitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    z-index: 1;
+}
+
+.ContextBookCard__bookAuthor {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #be5b04;
+}
+
+.ContextBookCard__bookGenre {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.Form__form {
+    padding: 4px 0;
+    line-height: 1.5em;
+}
+
+.FormTextInput__formTextInput {
+    display: block;
+    font-size: 14px;
+}
+
+.Form__formRow {
+    padding: 8px 0;
+}
+
+.Form__formControl {
+    margin: 4px 0 0;
+    padding: 4px 0;
+}
+
+.Button__primaryButton {
+    z-index: 1;
+    padding-right: 32px;
+    padding-left: 32px;
+    line-height: 50px;
+    color: #252628;
+    background: linear-gradient(180deg,#fed96f,#fec41f);f);
+}
